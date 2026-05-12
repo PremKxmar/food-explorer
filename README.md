@@ -110,9 +110,7 @@ src/
 5. **Design System**: CSS custom properties for theming (light/dark mode), with design tokens for colors, typography, spacing, and animations
 6. **Responsive**: Mobile-first CSS Grid layout that adapts from 1 column (mobile) to 4 columns (desktop)
 
-## Time Taken
 
-~3 hours total
 
 ## License
 
