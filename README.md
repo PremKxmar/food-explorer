@@ -22,7 +22,9 @@ A modern, responsive web application for exploring food products using the [Open
 | Vite | Build tool & dev server |
 | React Router v7 | Client-side routing |
 | React Context API | Global state (cart) |
-| Vanilla CSS | Styling with custom properties |
+| Tailwind CSS v3 | Utility-first styling with custom design tokens |
+| Google Fonts (Outfit + Inter) | Typography |
+| Material Symbols | Icons |
 | Open Food Facts API | Food product data |
 
 ## Getting Started
@@ -34,7 +36,7 @@ A modern, responsive web application for exploring food products using the [Open
 ### Installation
 
 ```bash
-git clone <repo-url>
+git clone https://github.com/PremKxmar/food-explorer.git
 cd food-explorer
 npm install
 ```
@@ -107,8 +109,8 @@ src/
 2. **API Integration**: Centralized API service with retry logic, AbortController for request cancellation, and response normalization
 3. **State Management**: React Context API for cart state (persisted to localStorage), custom hooks for product/category data
 4. **Infinite Scroll**: Implemented using Intersection Observer API for performant, native scrolling
-5. **Design System**: CSS custom properties for theming (light/dark mode), with design tokens for colors, typography, spacing, and animations
-6. **Responsive**: Mobile-first CSS Grid layout that adapts from 1 column (mobile) to 4 columns (desktop)
+5. **Design System**: Tailwind CSS with a custom Material 3 color palette, Outfit/Inter typography, and glassmorphism components — designed using Google Stitch
+6. **Responsive**: Mobile-first Tailwind Grid layout that adapts from 1 column (mobile) to 4 columns (desktop)
 
 
 

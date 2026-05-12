@@ -1,4 +1,5 @@
 import { useCallback } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { useProducts } from '../hooks/useProducts';
 import { useCategories } from '../hooks/useCategories';
 import SearchBar from '../components/SearchBar';
@@ -23,10 +24,16 @@ export default function HomePage() {
   } = useProducts();
 
   const { categories, loading: catLoading } = useCategories();
+  const navigate = useNavigate();
 
   const handleSearch = useCallback((query) => {
     search(query);
   }, [search]);
+
+  const handleBarcodeSearch = useCallback((barcode) => {
+    // Navigate directly to the product detail page for the barcode
+    navigate(`/product/${barcode}`);
+  }, [navigate]);
 
   return (
     <main className="pt-20">
@@ -42,7 +49,7 @@ export default function HomePage() {
           </p>
           
           <div className="w-full">
-            <SearchBar onSearch={handleSearch} />
+            <SearchBar onSearch={handleSearch} onBarcodeSearch={handleBarcodeSearch} />
           </div>
         </div>
       </section>
